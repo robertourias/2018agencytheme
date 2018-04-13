@@ -1,0 +1,141 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+body {
+    background: #2f5657;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .col-left {
+        position: relative;
+        width: 30%;
+        max-width: 300px;
+        float: left;
+        box-sizing: border-box;
+        margin: 60px 20px 20px;
+        z-index: 10;
+
+        .tab {
+            margin: 0 0 20px;
+            color: #fff;
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+
+            &.active {
+                color: #a88d75;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .col-right {
+        width: 69%;
+        float: right;
+        box-sizing: border-box;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .content-imgs {
+
+            .img {
+                @include transition(all 0.8s ease);
+                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+            }
+
+            .img[position='1'] {
+                position: absolute;
+                top: 100px;
+                left: 630px;
+                width: 493px;
+                height: 329px;
+                z-index: 6;
+            }
+
+            .img[position='2'] {
+                position: absolute;
+                top: 220px;
+                left: 190px;
+                width: 330px;
+                height: 220px;
+                opacity: 0.19;
+                z-index: 5;
+            }
+
+            .img[position='3'] {
+                position: absolute;
+                width: 319px;
+                height: 212px;
+                opacity: 0.23;
+                top: 469px;
+                left: 900px;
+                z-index: 4;
+            }
+
+            .img[position='4'] {
+                position: absolute;
+                top: 516px;
+                width: 192px;
+                height: 128px;
+                opacity: 0.17;
+                left: 215px;
+                z-index: 3;
+            }
+
+            .img[position='5'] {
+                position: absolute;
+                top: 310px;
+                left: -80px;
+                width: 296px;
+                height: 231px;
+                opacity: 0.17;
+                z-index: 2;
+            }
+
+            .img[position='6'] {
+                position: absolute;
+                width: 348px;
+                opacity: 0.14;
+                top: 300px;
+                left: 89%;
+                z-index: 1;
+            }
+        }
+
+        .content-tab {
+            color: #FFF;
+            display: none;
+            z-index: 10;
+            line-height: 1.4;
+
+            h1 {
+                position: relative;
+                margin: 0 0 20px;
+                font-size: 30px;
+                z-index: 10;
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
