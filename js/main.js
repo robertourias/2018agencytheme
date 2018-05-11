@@ -10,7 +10,7 @@ $(function () {
         },
         teste: function (e) {
             e.preventDefault();
-            return false;
+            return false; 
         },
         activeSections: function(){
             var elementos = $('.section');
@@ -38,7 +38,6 @@ $(function () {
 
         setTimeout(function () {
             main.init();
-            main.loadMenu();
         }, 200);
     }
 

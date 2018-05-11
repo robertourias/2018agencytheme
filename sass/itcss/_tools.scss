@@ -1,0 +1,102 @@
+// ==========================================================================
+// Tools
+// ==========================================================================
+//
+// Table of Contents:
+//
+//  1. Media Querys
+//  2. Grids
+
+// 1. Media Querys
+// ==========================================================================
+@mixin media-sm {
+	@media (min-width: #{$sm-screen}) {
+		@content;
+	}
+}
+
+@mixin media-md {
+	@media (min-width: #{$md-screen}) {
+		@content;
+	}
+}
+
+@mixin media-lg {
+	@media (min-width: #{$lg-screen}) {
+		@content;
+	}
+}
+
+// 2. Grids
+// ==========================================================================
+.row {
+    display: block;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    .col {
+        @include box-sizing(border-box);
+        padding: 0 10px;
+        float: left;
+    }
+
+    $grid-columns: 12;
+    $grid-columns-width: 100%/$grid-columns;
+
+    @for $i from 1 through $grid-columns {
+      .col-sm-#{$i} {
+          @extend .col;
+          width: $i * $grid-columns-width;
+      }
+
+      .col-sm-offset-#{$i} {
+          margin-left: $i * $grid-columns-width;
+      }
+
+      .col-sm-after-#{$i} {
+          margin-right: $i * $grid-columns-width;
+      }
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-md-#{$i} {
+          @extend .col;
+          @include media-sm {
+            width: $i * $grid-columns-width;
+          }
+      }
+
+      .col-md-offset-#{$i} {
+          @include media-sm {
+            margin-left: $i * $grid-columns-width;
+          }
+      }
+
+      .col-md-after-#{$i} {
+          @include media-sm {
+            margin-right: $i * $grid-columns-width;
+          }
+      }
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-lg-#{$i} {
+          @extend .col;
+          @include media-lg {
+            width: $i * $grid-columns-width;
+          }
+      }
+
+      .col-lg-offset-#{$i} {
+          @include media-lg {
+            margin-left: $i * $grid-columns-width;
+          }
+      }
+
+      .col-lg-after-#{$i} {
+          @include media-lg {
+            margin-right: $i * $grid-columns-width;
+          }
+      }
+    }
+}

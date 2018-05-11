@@ -1,0 +1,39 @@
+// ==========================================================================
+// Settings
+// ==========================================================================
+//
+// Table of Contents:
+//
+//  1. Colors
+//  2. Global
+//  3. Forms
+//  4. Typography: ;
+
+// 1. Colors
+// ==========================================================================
+$primary-color: #10161A;
+$primary-color-hover: @include shade($primary-color, 10%);
+$secondary-color: #868F9B;
+$secondary-color-hover: #868F9B;
+$backgrong-color: #F1F1F1;
+$backgrong-color-2: #FAFAFA;
+
+
+// 2. Global
+// ==========================================================================
+$margin: 20px;
+$sm-screen: 600px !default;
+$md-screen: 992px !default;
+$lg-screen: 1200px !default;
+
+
+// 3. Forms
+// ==========================================================================
+
+// 4. Typography
+// ==========================================================================
+@import "normalize";
+@include font-face("Montserrat", font-files("Montserrat-Regular.eot", "Montserrat-Regular.ttf", "Montserrat-Regular.woff", "Montserrat-Regular.svg"));
+@include font-face("VarelaRound", font-files("VarelaRound-Regular.eot", "VarelaRound-Regular.ttf", "VarelaRound-Regular.woff", "VarelaRound-Regular.svg"));
+$font-size: 14px;
+$line-height: 1.5;
