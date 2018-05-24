@@ -2,17 +2,17 @@
 // Generic
 // ==========================================================================
 
+html {
+ box-sizing: border-box;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+
 body {
-    //font-family: 'Montserrat', sans-serif;
-    font-family: 'Varela Round', sans-serif;
+    font-family: $font-face;
     font-size: $font-size;
     line-height: $line-height;
     overflow-x: hidden;
     color: $primary-color;
-}
-
-a {
-    &:hover {
-        text-decoration: none;
-    }
 }

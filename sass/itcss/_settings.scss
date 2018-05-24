@@ -35,5 +35,6 @@ $lg-screen: 1200px !default;
 @import "normalize";
 @include font-face("Montserrat", font-files("Montserrat-Regular.eot", "Montserrat-Regular.ttf", "Montserrat-Regular.woff", "Montserrat-Regular.svg"));
 @include font-face("VarelaRound", font-files("VarelaRound-Regular.eot", "VarelaRound-Regular.ttf", "VarelaRound-Regular.woff", "VarelaRound-Regular.svg"));
+$font-face: 'Varela Round', sans-serif;
 $font-size: 14px;
 $line-height: 1.5;
