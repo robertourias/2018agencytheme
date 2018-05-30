@@ -1,11 +1,31 @@
 {
-  "name": "Tema da Agencia",
+  "name": "Agency-Theme",
   "version": "1.0.0",
+  "description": "Projeto da Agencia",
+  "main": "./dist/main.min.js",
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "gulp",
+    "javascript",
+    "Vuejs"
+  ],
+  "author": "Roberto Nicoletti",
+  "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.24.4",
     "grunt": "^1.0.2",
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-uglify": "^3.3.0",
-    "grunt-contrib-watch": "^1.0.1"
+    "grunt-contrib-watch": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.0",
+    "jshint-stylish": "^2.2.1"
   }
 }

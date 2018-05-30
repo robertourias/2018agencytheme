@@ -38,29 +38,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 
-  &.striped {
-    tr {
-      border-bottom: none;
-    }
-
-    > tbody {
-      > tr:nth-child(odd) {
-        background-color: $table-striped-color;
-      }
-
-      > tr > td {
-        border-radius: 0;
-      }
-    }
-  }
-
-  &.highlight > tbody > tr {
-    transition: background-color .25s ease;
-    &:hover {
-      background-color: $table-striped-color;
-    }
-  }
-
   &.centered {
     thead tr th, tbody tr td {
       text-align: center;
@@ -69,7 +46,7 @@ table {
 }
 
 tr {
-  border-bottom: 1px solid $table-border-color;
+  border-bottom: 1px solid $secondary-color;
 }
 
 td, th{
@@ -81,7 +58,7 @@ td, th{
 }
 
 // Responsive Table
-@media #{$medium-and-down} {
+@include media-md {
 
   table.responsive-table {
     width: 100%;
@@ -143,7 +120,7 @@ td, th{
     /* sort out borders */
     thead {
       border: 0;
-      border-right: 1px solid $table-border-color;
+      border-right: 1px solid $secondary-color;
     }
   }
 

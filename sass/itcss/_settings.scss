@@ -12,7 +12,7 @@
 // 1. Colors
 // ==========================================================================
 $primary-color: #10161A;
-$primary-color-hover: @include shade($primary-color, 10%);
+$primary-color-hover: #10161A;
 $secondary-color: #868F9B;
 $secondary-color-hover: #868F9B;
 $backgrong-color: #F1F1F1;
@@ -32,7 +32,7 @@ $lg-screen: 1200px !default;
 
 // 4. Typography
 // ==========================================================================
-@import "normalize";
+//@import "normalize";
 @include font-face("Montserrat", font-files("Montserrat-Regular.eot", "Montserrat-Regular.ttf", "Montserrat-Regular.woff", "Montserrat-Regular.svg"));
 @include font-face("VarelaRound", font-files("VarelaRound-Regular.eot", "VarelaRound-Regular.ttf", "VarelaRound-Regular.woff", "VarelaRound-Regular.svg"));
 $font-face: 'Varela Round', sans-serif;
